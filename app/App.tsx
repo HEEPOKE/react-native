@@ -2,6 +2,13 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
+  const styles = StyleSheet.create({
+    container: {
+      margin: 0,
+      padding: 0,
+    },
+  });
+
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
@@ -9,10 +16,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    margin: 0,
-    padding: 0,
-  },
-});
