@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-import { Provider, Button } from "react-native-paper";
+import { Button } from "react-native-paper";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
@@ -44,31 +44,27 @@ export default function LoginScreen() {
   });
 
   return (
-    <Provider>
-      <View style={styles.container}>
-        <Text style={styles.title}>Login</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Password"
-          secureTextEntry={true}
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-        />
-        <Button mode="contained" style={styles.button} onPress={() => {}}>
-          Login
-        </Button>
-        <TouchableOpacity style={styles.register}>
-          <Text style={styles.registerText}>
-            Don't have an account? Register
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </Provider>
+    <View style={styles.container}>
+      <Text style={styles.title}>Login</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+        value={email}
+        onChangeText={(text) => setEmail(text)}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
+        secureTextEntry={true}
+        value={password}
+        onChangeText={(text) => setPassword(text)}
+      />
+      <Button mode="contained" style={styles.button} onPress={() => {}}>
+        Login
+      </Button>
+      <TouchableOpacity style={styles.register}>
+        <Text style={styles.registerText}>Don't have an account? Register</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
