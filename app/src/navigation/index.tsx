@@ -6,11 +6,11 @@ import RegisterScreen from "../screens/auth/register";
 
 const Stack = createStackNavigator();
 
-export default function Navigator() {
+export default function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="login" component={LoginScreen} />
+        <Stack.Screen name="Root" component={LoginScreen} />
         <Stack.Screen name="register" component={RegisterScreen} />
       </Stack.Navigator>
     </NavigationContainer>

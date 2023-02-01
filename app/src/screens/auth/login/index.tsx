@@ -43,6 +43,10 @@ export default function LoginScreen() {
     },
   });
 
+  function register() {
+
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
