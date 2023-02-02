@@ -4,48 +4,43 @@ import {
   View,
   Text,
   TextInput,
-  TouchableOpacity,
 } from "react-native";
 import { Button } from "react-native-paper";
 
-export default function LoginScreen() {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
+  },
+  input: {
+    width: "80%",
+    height: 40,
+    padding: 10,
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 5,
+  },
+  button: {
+    width: "80%",
+    marginTop: 20,
+  },
+  register: {
+    marginTop: 20,
+  },
+  registerText: {
+    color: "#333",
+  },
+});
+
+const LoginScreen = ({ navigation }: any) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    title: {
-      fontSize: 24,
-      marginBottom: 20,
-    },
-    input: {
-      width: "80%",
-      height: 40,
-      padding: 10,
-      marginBottom: 20,
-      borderWidth: 1,
-      borderColor: "#ccc",
-      borderRadius: 5,
-    },
-    button: {
-      width: "80%",
-      marginTop: 20,
-    },
-    register: {
-      marginTop: 20,
-    },
-    registerText: {
-      color: "#333",
-    },
-  });
-
-  function register() {
-
-  }
 
   return (
     <View style={styles.container}>
@@ -66,9 +61,11 @@ export default function LoginScreen() {
       <Button mode="contained" style={styles.button} onPress={() => {}}>
         Login
       </Button>
-      <TouchableOpacity style={styles.register}>
-        <Text style={styles.registerText}>Don't have an account? Register</Text>
-      </TouchableOpacity>
+      <Button mode="text" onPress={() => navigation.navigate("Register")}>
+        Don't have an account? Go to Register
+      </Button>
     </View>
   );
-}
+};
+
+export default LoginScreen;
