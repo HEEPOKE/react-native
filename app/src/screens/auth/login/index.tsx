@@ -1,37 +1,7 @@
 import { useState } from "react";
-import { StyleSheet, View, Text, TextInput } from "react-native";
+import { View, Text, TextInput } from "react-native";
 import { Button } from "@react-native-material/core";
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
-  },
-  input: {
-    width: "80%",
-    height: 40,
-    padding: 10,
-    marginBottom: 20,
-    borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 5,
-  },
-  button: {
-    width: "80%",
-    marginTop: 20,
-  },
-  register: {
-    marginTop: 20,
-  },
-  registerText: {
-    color: "#333",
-  },
-});
+import styles from "../../../styles/form.style";
 
 const LoginScreen = ({ navigation }: any) => {
   const [email, setEmail] = useState("");
