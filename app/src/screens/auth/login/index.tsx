@@ -5,7 +5,7 @@ import {
   Text,
   TextInput,
 } from "react-native";
-import { Button } from "react-native-paper";
+import { Button } from "@react-native-material/core";
 
 const styles = StyleSheet.create({
   container: {
@@ -58,12 +58,8 @@ const LoginScreen = ({ navigation }: any) => {
         value={password}
         onChangeText={(text) => setPassword(text)}
       />
-      <Button mode="contained" style={styles.button} onPress={() => {}}>
-        Login
-      </Button>
-      <Button mode="text" onPress={() => navigation.navigate("Register")}>
-        Don't have an account? Go to Register
-      </Button>
+      <Button title="login" style={styles.button} onPress={() => {}} />
+      <Button title="register" onPress={() => navigation.navigate("Register")} />
     </View>
   );
 };

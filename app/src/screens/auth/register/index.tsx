@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
-import { Button } from "react-native-paper";
+import { Button } from "@react-native-material/core";
 
 const styles = StyleSheet.create({
   container: {
@@ -60,9 +60,7 @@ const RegisterScreen = () => {
         value={password}
         onChangeText={(text) => setPassword(text)}
       />
-      <Button mode="contained" style={styles.button} onPress={() => {}}>
-        register
-      </Button>
+      <Button title="submit" style={styles.button} onPress={() => {}} />
     </View>
   );
 };
