@@ -34,12 +34,20 @@ const styles = StyleSheet.create({
 });
 
 const RegisterScreen = () => {
+  const [userName, setUserName] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Register</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Username"
+        value={userName}
+        onChangeText={(text) => setUserName(text)}
+      />
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -57,8 +65,8 @@ const RegisterScreen = () => {
         style={styles.input}
         placeholder="Confirm Password"
         secureTextEntry={true}
-        value={password}
-        onChangeText={(text) => setPassword(text)}
+        value={confirmPassword}
+        onChangeText={(text) => setConfirmPassword(text)}
       />
       <Button title="submit" style={styles.button} onPress={() => {}} />
     </View>

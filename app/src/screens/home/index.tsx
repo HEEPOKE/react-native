@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, TextInput } from "react-native";
+import { View, Text } from "react-native";
 import MyAppBar from "../../widgets/AppBar";
 
 const HomeScreen = () => {

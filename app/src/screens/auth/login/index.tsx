@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  TextInput,
-} from "react-native";
+import { StyleSheet, View, Text, TextInput } from "react-native";
 import { Button } from "@react-native-material/core";
 
 const styles = StyleSheet.create({
@@ -59,7 +54,11 @@ const LoginScreen = ({ navigation }: any) => {
         onChangeText={(text) => setPassword(text)}
       />
       <Button title="login" style={styles.button} onPress={() => {}} />
-      <Button title="register" onPress={() => navigation.navigate("Register")} />
+      <Button
+        title="register"
+        style={styles.button}
+        onPress={() => navigation.navigate("Register")}
+      />
     </View>
   );
 };

@@ -12,7 +12,6 @@ const MyAppBar = () => {
 
   return (
     <AppBar
-      title="Title"
       leading={(props) => (
         <IconButton
           icon={(props) => <Icon name="menu" {...props} />}
