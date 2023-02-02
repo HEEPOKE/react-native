@@ -1,20 +1,21 @@
 import * as React from "react";
+import { Stack, ActivityIndicator } from "@react-native-material/core";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import LoginScreen from "../screens/auth/login/";
 import RegisterScreen from "../screens/auth/register/";
 import HomeScreen from "../screens/home";
 
-const Stack = createStackNavigator();
+const Stacking = createStackNavigator();
 
 export default function AppNavigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Register" component={RegisterScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
+      <Stacking.Navigator initialRouteName="Login">
+        <Stacking.Screen name="Login" component={LoginScreen} />
+        <Stacking.Screen name="Register" component={RegisterScreen} />
+        <Stacking.Screen name="Home" component={HomeScreen} />
+      </Stacking.Navigator>
     </NavigationContainer>
   );
 }
