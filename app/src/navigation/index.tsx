@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Stack, ActivityIndicator } from "@react-native-material/core";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import LoginScreen from "../screens/auth/login/";
