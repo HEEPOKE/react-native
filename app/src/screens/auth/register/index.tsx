@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { View, Text, TextInput } from "react-native";
-import { Button } from "@react-native-material/core";
+import { View, Text } from "react-native";
+import { Button, Icon, TextInput } from "@react-native-material/core";
 import styles from "../../../styles/form.style";
 
 const RegisterScreen = () => {
-  const [userName, setUserName] = useState("")
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -13,27 +13,31 @@ const RegisterScreen = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Register</Text>
       <TextInput
+        label="Username"
+        leading={(props) => <Icon name="user" {...props} />}
         style={styles.input}
-        placeholder="Username"
         value={userName}
         onChangeText={(text) => setUserName(text)}
       />
       <TextInput
+        label="Email"
+        leading={(props) => <Icon name="email" {...props} />}
         style={styles.input}
-        placeholder="Email"
         value={email}
         onChangeText={(text) => setEmail(text)}
       />
       <TextInput
+        label="Password"
+        leading={(props) => <Icon name="lock" {...props} />}
         style={styles.input}
-        placeholder="Password"
         secureTextEntry={true}
         value={password}
         onChangeText={(text) => setPassword(text)}
       />
       <TextInput
+        label="Confirm Password"
+        leading={(props) => <Icon name="lock" {...props} />}
         style={styles.input}
-        placeholder="Confirm Password"
         secureTextEntry={true}
         value={confirmPassword}
         onChangeText={(text) => setConfirmPassword(text)}
