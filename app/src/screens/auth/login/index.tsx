@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { View, Text, TextInput } from "react-native";
-import { Button } from "@react-native-material/core";
+import { View, Text } from "react-native";
+import { Button, TextInput } from "@react-native-material/core";
+import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import styles from "../../../styles/form.style";
 
 const LoginScreen = ({ navigation }: any) => {
@@ -11,14 +12,16 @@ const LoginScreen = ({ navigation }: any) => {
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
       <TextInput
+        label="Email"
+        leading={(props) => <Icon name="email" {...props} />}
         style={styles.input}
-        placeholder="Email"
         value={email}
         onChangeText={(text) => setEmail(text)}
       />
       <TextInput
+        label="Password"
+        leading={(props) => <Icon name="lock" {...props} />}
         style={styles.input}
-        placeholder="Password"
         secureTextEntry={true}
         value={password}
         onChangeText={(text) => setPassword(text)}
