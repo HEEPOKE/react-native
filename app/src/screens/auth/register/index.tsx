@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { View, Text } from "react-native";
-import { Button, Icon, TextInput } from "@react-native-material/core";
+import { Button, TextInput } from "@react-native-material/core";
+import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import styles from "../../../styles/form.style";
 
 const RegisterScreen = () => {
@@ -14,7 +15,7 @@ const RegisterScreen = () => {
       <Text style={styles.title}>Register</Text>
       <TextInput
         label="Username"
-        leading={(props) => <Icon name="user" {...props} />}
+        leading={(props) => <Icon name="account" {...props} />}
         style={styles.input}
         value={userName}
         onChangeText={(text) => setUserName(text)}
@@ -46,4 +47,5 @@ const RegisterScreen = () => {
     </View>
   );
 };
+
 export default RegisterScreen;
