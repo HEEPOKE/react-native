@@ -43,7 +43,7 @@ const RegisterScreen = () => {
         value={confirmPassword}
         onChangeText={(text) => setConfirmPassword(text)}
       />
-      <Button title="submit" style={styles.button} onPress={() => {}} />
+      <Button title="submit" style={styles.button} />
     </View>
   );
 };
