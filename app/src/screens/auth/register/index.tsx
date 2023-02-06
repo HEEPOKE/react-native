@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { Button, TextInput } from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import styles from "../../../styles/form.style";
@@ -9,6 +9,8 @@ const RegisterScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleSubmit = async () => {};
 
   return (
     <View style={styles.container}>
@@ -43,7 +45,9 @@ const RegisterScreen = () => {
         value={confirmPassword}
         onChangeText={(text) => setConfirmPassword(text)}
       />
-      <Button title="submit" style={styles.button} />
+      <TouchableOpacity onPress={handleSubmit}>
+        <Button title="submit" style={styles.button} />
+      </TouchableOpacity>
     </View>
   );
 };
