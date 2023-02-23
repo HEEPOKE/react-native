@@ -1,3 +1,5 @@
-declare module "@env" {
-  export const ENDPOINT_URL: string;
-}
+// declare module "dotenv" {
+//   export const config: {
+//     [key: string]: string;
+//   };
+// }

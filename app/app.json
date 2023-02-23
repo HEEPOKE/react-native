@@ -3,6 +3,9 @@
     "name": "app",
     "slug": "app",
     "version": "1.0.0",
+    "extra": {
+      "ENDPOINT_URL": "http:\\localhost:6476"
+    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -29,8 +32,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "@react-native-google-signin/google-signin"
-    ]
+    "plugins": ["@react-native-google-signin/google-signin"]
   }
 }

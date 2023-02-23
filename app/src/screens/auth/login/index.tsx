@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import { Button, TextInput } from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import styles from "../../../styles/form.style";
-import { ENDPOINT_URL } from '@env';
+
 
 const LoginScreen = ({ navigation }: any) => {
   const [email, setEmail] = useState("");
